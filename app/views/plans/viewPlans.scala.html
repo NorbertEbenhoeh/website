@@ -1,0 +1,109 @@
+@(nickname: String)
+
+@main("Training Plans") {
+<header id="contentHeader">
+    <h1 class="nextTimestamp">Saison 2011/2012</h1>
+    <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+    <a href="#">edit</a>
+    <a href="#">copy</a>
+    <a href="#">delete</a>
+    <a href="#">print</a>
+    <a href="#">add to training plan</a>
+    <a href="#">back to list</a>
+</header>
+<div id="trainPlansWrapper">
+    <section id="trainPlansInfo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+        <span class="attributes">Sportstype: Badminton</span>
+        <span class="attributes">Rating: 5/5</span>
+        <span class="attributes">Difficulty: n/a</span>
+        <span class="attributes">Duration: 15min</span>
+    </section>
+    <section class="trainPlansListOverview">
+        <div class="magnet magnet2"></div>
+        <div class="scroll">
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/tp_icon.png")'>
+                </figure>
+                <h1><a href="#">Warm Up I</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <h1><a href="#">Halfsmash longline</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <h1><a href="#">Smash longline</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <h1><a href="#">Smash cross</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/tp_icon.png")'>
+                </figure>
+                <h1><a href="#">Switch smash longline/cross </a></h1>
+                <a href="#">remove</a>
+            </div>
+        </div>
+        <a class="listEnd" href="#">add exercise</a>
+        <a class="listEnd" href="#">add training plan</a>
+        <div class="left-shadow"></div>
+        <div class="right-shadow"></div>
+    </section>
+</div>
+<section id="comments">
+    <h1>Comments</h1>
+    <aside class="commentItem">
+        <figure>
+            <img width="100" height="100" src='@routes.Assets.at("images/apple-touch-icon-114x114-precomposed.png")'>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <span class="timestamp">from Christian on 12/05/2011 at 12:50pm</span>
+        <a href="#">delete</a>
+    </aside>
+    <br/>
+    <aside class="commentItem">
+        <figure>
+            <img width="100" height="100" src='@routes.Assets.at("images/apple-touch-icon-114x114-precomposed.png")'>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+        <a href="#">edit</a>
+        <a href="#">delete</a>
+    </aside>
+    <br/>
+    <aside class="commentItem">
+        <figure>
+            <img width="100" height="100" src='@routes.Assets.at("images/apple-touch-icon-114x114-precomposed.png")'>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+        <a href="#">edit</a>
+        <a href="#">delete</a>
+    </aside>
+    <form>
+        <input class="button" type="button" value="Write a comment">
+    </form>
+</section>
+}

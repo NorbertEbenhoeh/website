@@ -1,0 +1,21 @@
+@(deleteAccountForm: Form[(String)])
+@import helper._
+<div id="coverAll">
+    <div id="msgCoverAll">
+        @form(action = routes.Users.submitDeleteAccount) {
+
+        <div class="changePasswordContainer">@inputPassword(
+            field = deleteAccountForm("password"),
+            args = '_label -> "Password:", 'class -> "inputField",'id -> "oldPassword", 'name -> "oldPassword", '_help -> ""
+            )
+        </div>
+        @deleteAccountForm.globalError.map { error =>
+        <p>
+            @error.message
+        </p>
+        }
+        <input class="button" type="submit" value="Delete account"  id="submitDeleteAccount" />
+        <input class="button" type="button" value="Cancel" onClick="window.location.href='/settings'"/>
+        }
+    </div>
+</div>

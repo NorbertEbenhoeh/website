@@ -1,0 +1,53 @@
+@(current: String)
+
+<div class="wrapperHeader">
+    <div class="wrapperHeader2">
+        <header id="mainHeader">
+            <div id="test">
+                <div id="logo"><a href="/">SMAP</a></div>
+                <div id="searchContainer">
+                    <form>
+                        <input class="inputField" type="search" value="" placeholder="Search" id="search" />
+                        <input class="button" type="submit" value="Search"  id="submitSearch" />
+                    </form>
+                </div>
+            </div>
+            <!-- Hier muss je nachdem die Navigation raus (z.B. im Login screen oder in der Suche), und die richtige Location markiert werden -->
+            <!-- das hier kann vielleicht raus. Je nachdem ob jemand eingeloggt ist, oder nicht soll die Navigation überhaupt angezeigt werden-->
+            @if(current == "Login") {
+            } else {
+            <nav>
+                <ul>
+                    @if(current == "Exercises") {
+                    <li><a class="mainMenu currentMain" href="@routes.Exercises.exercises"><span class="textNav">Exercises</span><canvas id="navExercises" width="138" height="138"></canvas></a></li>
+                    } else {
+                    <li><a class="mainMenu" href="@routes.Exercises.exercises"><span class="textNav">Exercises</span><canvas id="navExercises" width="138" height="138"></canvas></a></li>
+                    }
+                    @if(current == "Training Plans") {
+                    <li><a class="mainMenu currentMain" href="@routes.Plans.plans"><span class="textNav">Training plans</span><canvas id="navTrainPlans" width="138" height="138"></canvas></a></li>
+                    } else {
+                    <li><a class="mainMenu" href="@routes.Plans.plans"><span class="textNav">Training plans</span><canvas id="navTrainPlans" width="138" height="138"></canvas></a></li>
+                    }
+                    @if(current == "Community") {
+                    <li><a class="mainMenu currentMain" href="@routes.Community.community"><span class="textNav">Community</span><canvas id="navCommunity" width="130" height="130"></canvas></a></li>
+                    }else {
+                    <li><a class="mainMenu" href="@routes.Community.community"><span class="textNav">Community</span><canvas id="navCommunity" width="130" height="130"></canvas></a></li>
+                    }
+                    @if(current == "Settings") {
+                    <li><a class="mainMenu currentMain" href="@routes.Settings.settings"><span class="textNav">Other</span><canvas id="navSettings" width="138" height="138"></canvas></a>
+                        } else {
+                    <li><a class="mainMenu" href="@routes.Settings.settings"><span class="textNav">Other</span><canvas id="navSettings" width="138" height="138"></canvas></a>
+                        }
+                        <ul class="miniMenu visuallyhidden">
+                            <li><a href="account">Account</a></li>
+                            <li><a href="settings">Settings</a></li>
+                            <li><a href="logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            }
+
+        </header>
+    </div>
+</div>

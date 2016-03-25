@@ -1,0 +1,14 @@
+@(elements: helper.FieldElements)
+
+<div class="inputOuterContainer">
+    <div class="@if(elements.hasErrors) {error}">
+        <div class="inputInnerContainer" id="div@elements.id">
+            <label for="@elements.id" class="elementsLabel">@elements.label</label>
+            <div class="input">
+                @elements.input
+                <span class="errors" id="errors@elements.id">@elements.errors.mkString(". ")</span>
+                <span class="help">@elements.infos.mkString(". ")</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+@(nickname: String)
+
+@main("Exercises") {
+<form id="searchForm">
+    <input class="inputField" type="text" value="" placeholder="Enter name of the exercise here..." id="exerciseName" />
+    <a href="#">End editing and view exercise</a>
+</form>
+
+<div id="exercisesWrapper">
+    <section id="exercisesInfo">
+        <form class="exercisesConfig">
+            <fieldset>
+                <div class="configSelect">
+                    <label for="sportstype">Sportstype: </label>
+                    <select class="inputField" name="sportstype" id="sportstype">
+                        <option value="aikido">Aikido</option>
+                        <option value="badminton">Badminton</option>
+                        <option value="football">Football</option>
+                    </select>
+                </div>
+
+                <div class="configSelect">
+                    <label for="field">Field: </label>
+                    <select class="inputField" name="field" id="field">
+                        <option value="5x5">5x5</option>
+                        <option value="Badminton">Badminton</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="configDragAndDrop">
+                    <canvas class="inputField" height="100px" width="100px"></canvas>
+                    <select class="inputField" name="player" id="player">
+                        <option value="running">Running</option>
+                        <option value="standing">Standing</option>
+                        <option value="walking">Walking</option>
+                    </select>
+                </div>
+
+                <div class="configDragAndDrop">
+                    <canvas class="inputField" height="100px" width="100px"></canvas>
+                    <select class="inputField" name="arrow" id="arrow">
+                        <option value="default">Standard arrow</option>
+                        <option value="clear">Clear</option>
+                    </select>
+                </div>
+
+                <div class="configDragAndDrop">
+                    <canvas class="inputField" height="100px" width="100px"></canvas>
+                    <select class="inputField" name="object" id="object">
+                        <option value="quadratic">Quadratic</option>
+                    </select>
+                </div>
+
+                <div class="configSelect">
+                    <label for="color">Color: </label>
+                    <select class="inputField" name="color" id="color">
+                        <option value="black">Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+
+                <div class="configSelect">
+                    <label for="size">Size: </label>
+                    <select class="inputField" name="size" id="size">
+                        <option value="smaller">Smaller</option>
+                        <option value="small">Small</option>
+                        <option value="normal">Normal</option>
+                        <option value="large">Large</option>
+                        <option value="larger">Larger</option>
+                    </select>
+                </div>
+
+                <div class="configSelect">
+                    <label for="sequence">Sequence: </label>
+                    <select class="inputField" name="sequence" id="sequence">
+                        <option value="0">none</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <textarea class="inputField configSelect" cols="35" rows="3" name="exerciseDescription" placeholder="Put in your description here..."></textarea>
+                <div class="configSelect">
+                    <label for="difficulty">Difficulty: </label>
+                    <select class="inputField" name="difficulty" id="difficulty">
+                        <option value="1">Beginner (1)</option>
+                        <option value="2">Intermediate (2)</option>
+                        <option value="3">Hobby Player (3)</option>
+                        <option value="4">Competitive athlete (4)</option>
+                        <option value="5">Top athlete (5)</option>
+                    </select>
+                </div>
+                <label for="duration">Duration (minutes): </label>
+                <input class="inputField" type="text" name="duration" value="" id="duration" />
+                <div class="configSelect">
+                    <label for="visibility">Visibility: </label>
+                    <select class="inputField" name="visibility" id="visibility">
+                        <option value="private">Private</option>
+                        <option value="all">All</option>
+                        <option value="restricted">All my Friends and Groups</option>
+                        <option value="group">SG Post/Süd Regensburg</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <section id="exercisesDraw">
+        <canvas class="inputField" height="550px" width="650px"></canvas>
+        <br>
+        play button und ablaufleiste <br>
+        <p>Description of step X:</p>
+        <textarea class="inputField configSelect" cols="35" rows="2" name="exerciseDescription" placeholder="Put in your description here..."></textarea>
+    </section>
+</div>
+}

@@ -1,0 +1,45 @@
+@(changeEmailForm: Form[(String,String)])
+@import helper._
+<div id="coverAll">
+    <div id="msgCoverAll">
+
+        @form(action = routes.Users.submitChangeEmail) {
+
+        <div class="changePasswordContainer">@inputPassword(
+            field = changeEmailForm("password"),
+            args = '_label -> "Password:", 'class -> "inputField",'id -> "password", 'name -> "Old password", '_help -> ""
+            )
+        </div>
+        <div class="changePasswordContainer">@inputText(
+            field = changeEmailForm("email"),
+            args = '_label -> "New E-Mail address:",'class -> "inputField",'id -> "newEmail", 'name -> "New email", '_help -> ""
+            )
+        </div>
+
+        @changeEmailForm.globalError.map { error =>
+        <p>
+            @error.message
+        </p>
+        }
+
+        <input class="button" type="submit" value="Change E-Mail"  id="submitChangeEmail" />
+        <input class="button" type="button" value="Cancel" onClick="window.location.href='/settings'"/>
+        }
+
+
+        <!-- 					<form id="formChangePassword"> -->
+        <!-- 						<div class="changePasswordContainer"> -->
+        <!-- 							<label for="password">Password:</label> -->
+        <!-- 								<input type="password" id ="password" name="Old password" class="inputField"> -->
+        <!-- 						</div> -->
+        <!-- 						<div class="changePasswordContainer"> -->
+        <!-- 							<label for="newEmail">New E-Mail address:</label> -->
+        <!-- 							<div> -->
+        <!-- 								<input type="text" id ="newEmail" name="New email" class="inputField"> -->
+        <!-- 							</div> -->
+        <!-- 						</div> -->
+        <!-- 						<input class="button" type="submit" value="Change E-Mail"/> -->
+        <!-- 						<input class="button" type="button" value="Cancel"/> -->
+        <!-- 					</form> -->
+    </div>
+</div>

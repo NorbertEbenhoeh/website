@@ -1,0 +1,91 @@
+@(nickname: String)
+
+@main("Training Plans") {
+<form id="searchForm">
+    <input class="inputField" type="text" value="" placeholder="Enter name of the train plan here..." id="trainPlanName" />
+    <a href="trainPlans_view.html">End editing and view training plan</a>
+</form>
+<div id="trainPlansWrapper">
+    <section id="trainPlansInfo">
+        <form class="trainPlansConfig">
+            <fieldset>
+                <textarea class="inputField" cols="35" rows="3" name="trainPlanDescription" placeholder="Put in your description here..."></textarea>
+                <div class="configSelect">
+                    <label for="sport">Sport: </label>
+                    <select class="inputField" name="sport" id="sport">
+                        <option value="aikido">Aikido</option>
+                        <option value="badminton">Badminton</option>
+                        <option value="football">Football</option>
+                    </select>
+                </div>
+                <div class="configSelect">
+                    <label for="difficulty">Difficulty: </label>
+                    <select class="inputField" name="difficulty" id="difficulty">
+                        <option value="1">Beginner (1)</option>
+                        <option value="2">Intermediate (2)</option>
+                        <option value="3">Hobby Player (3)</option>
+                        <option value="4">Competitive athlete (4)</option>
+                        <option value="5">Top athlete (5)</option>
+                    </select>
+                </div>
+                <label for="duration">Total duration (minutes): </label>
+                <input class="inputField" type="text" name="duration" value="" id="duration" />
+                <div class="configSelect">
+                    <label for="visibility">Visibility: </label>
+                    <select class="inputField" name="visibility" id="visibility">
+                        <option value="private">Private</option>
+                        <option value="all">All</option>
+                        <option value="restricted">All my Friends and Groups</option>
+                        <option value="group">SG Post/Süd Regensburg</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+        <span class="attributes">Duration of training plan content: 15min</span>
+    </section>
+    <section class="trainPlansListOverview">
+        <div class="magnet magnet2"></div>
+        <div class="scroll">
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/tp_icon.png")'>
+                </figure>
+                <h1><a href="#">Warm Up I</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <h1><a href="#">Halfsmash longline</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <h1><a href="#">Smash longline</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <h1><a href="#">Smash cross</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/tp_icon.png")'>
+                </figure>
+                <h1><a href="#">Switch smash longline/cross </a></h1>
+                <a href="#">remove</a>
+            </div>
+        </div>
+        <a class="listEnd" href="#">add exercise</a>
+        <a class="listEnd" href="#">add training plan</a>
+        <div class="left-shadow"></div>
+        <div class="right-shadow"></div>
+    </section>
+</div>
+}

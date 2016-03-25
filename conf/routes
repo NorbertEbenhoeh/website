@@ -1,0 +1,52 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+#
+
+
+# Home page
+GET     /                           controllers.Application.index
+
+#Submit Login
+GET     /login                      controllers.Application.login
+POST    /login                      controllers.Application.submitLogin
+GET     /logout                     controllers.Application.logout
+
+# Submit Register
+GET     /register                   controllers.Users.createUser
+POST	/register                   controllers.Users.submitCreateUser
+
+# Exercises
+GET     /exercises					controllers.Exercises.exercises
+## Exercises edit
+GET     /editExercises				controllers.Exercises.editExercises
+## Exercises view
+GET     /viewExercises     		    controllers.Exercises.viewExercises
+
+# Training plans
+GET     /plans            		    controllers.Plans.plans
+
+## Training plans edit
+GET     /editPlans			        controllers.Plans.editPlans
+## Training plans view
+GET     /viewPlans 			        controllers.Plans.viewPlans
+
+# Community
+GET     /community     				controllers.Community.community
+
+# Other
+GET     /settings    				controllers.Settings.settings
+POST	/changeSettings				controllers.Settings.changeSettings
+
+# Account
+GET     /account        			controllers.Users.account
+POST	/account                   	controllers.Users.changeAccount
+POST	/updateAccount				controllers.Users.updateAccount
+POST	/submitChangePassword		controllers.Users.submitChangePassword
+POST	/submitChangeEmail			controllers.Users.submitChangeEmail
+POST	/submitDeleteAccount		controllers.Users.submitDeleteAccount
+
+# Search
+GET     /search						controllers.Search.search
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

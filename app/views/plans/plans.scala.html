@@ -1,0 +1,101 @@
+@(nickname: String)
+
+@main("Training Plans") {
+<h1>Training plans</h1>
+<div id="trainPlansWrapper">
+    <section class="trainPlansList">
+        <form>
+            <div class="searchCrit">
+                <label for="sort">Sort by: </label>
+                <select class="inputField" name="sort" id="sort">
+                    <option value="name">Name</option>
+                    <option value="date">Date</option>
+                    <option value="owner">Owner</option>
+                    <option value="difficulty">Difficulty</option>
+                    <option value="duration">Duration</option>
+                    <option value="sport">Sport</option>
+                </select>
+            </div>
+        </form>
+        <div class="listItem listItemPad">
+            <div class="listItemOver">
+                <h1><a href="#">Saison 2011/2012</a></h1>
+                <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+                <a href="#">edit</a>
+                <a href="#">copy</a>
+                <a href="#">delete</a>
+            </div>
+        </div>
+        <div class="listItem listItemPad">
+            <div class="listItemOver">
+                <h1><a href="#">Jugend 9-12</a></h1>
+                <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+                <a href="#">edit</a>
+                <a href="#">copy</a>
+                <a href="#">delete</a>
+            </div>
+        </div>
+        <div class="listItem listItemPad">
+            <div class="listItemOver">
+                <h1><a href="#">Jugend 13-15</a></h1>
+                <span class="timestamp">from Christian on 12/05/2011 at 12:50pm</span>
+                <a href="#">remove</a>
+            </div>
+        </div>
+        <div class="listItem listItemPad">
+            <div class="listItemOver">
+                <h1><a href="#">Clear Training</a></h1>
+                <span class="timestamp">from Christian on 12/05/2011 at 12:50pm</span>
+                <a href="#">remove</a>
+            </div>
+        </div>
+        <form>
+            <input class="button" type="button" value="Create new train plan">
+        </form>
+    </section>
+    <section class="trainPlansListOverview">
+        <div class="magnet magnet2"></div>
+        <div class="scroll">
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/tp_icon.png")'>
+                </figure>
+                <h1><a href="#">Warm Up I</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <h1><a href="#">Halfsmash longline</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <h1><a href="#">Smash longline</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <h1><a href="#">Smash cross</a></h1>
+                <a href="#">remove</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/tp_icon.png")'>
+                </figure>
+                <h1><a href="#">Switch smash longline/cross </a></h1>
+                <a onclick="popup('Do you really want to remove this training plan from the list?')" href="#">remove</a>
+            </div>
+        </div>
+        <a class="listEnd" href="#">add exercise</a>
+        <a class="listEnd" href="#">add train plan</a>
+        <div class="left-shadow"></div>
+        <div class="right-shadow"></div>
+    </section>
+</div>
+}

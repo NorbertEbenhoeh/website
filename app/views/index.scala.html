@@ -1,0 +1,76 @@
+@(email: String)
+
+@main("Index") {
+<div id="newsWrapper">
+    <section id="startMsg">
+        <canvas id="newsMan" height="170px" width="100px"></canvas>
+        <div class="talkBubble">
+            <p> Hallo @email ,<br>der frühe Vogel fängt den Wurm!
+            </p>
+        </div>
+    </section>
+    <section class="newsContainer">
+        <div class="magnet magnet3"></div>
+        <h1>Activities</h1>
+        <div class="scroll">
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <p>Stefan created a new exercise.</p>
+                <span class="timestamp">12/05/2011 at 12:50pm</span>
+                <a href="#">view</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <p>Christian has updated a exercise you use.</p>
+                <span class="timestamp">12/05/2011 at 12:50pm</span>
+                <a href="#">view</a>
+                <a href="#">update exercise</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/tp_icon.png")'>
+                </figure>
+                <p>Your training plan "Smash training" has been rated 9 times. "Smash training" now has the rating of 4.87. ayfgdazhf asguhaigu agohag apgjioarjgija aigjaiorjg sagdhdi agohdoagj aginojgn asgjngn aognnj oekthmgfbneisgnn inaysgöogntrvb eaunhgh398g</p>
+                <span class="timestamp">12/05/2011 at 12:50pm</span>
+                <a href="#">view</a>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+                </figure>
+                <p>Your Exercise "Warm up II" has been commented.</p>
+                <span class="timestamp">12/05/2011 at 12:50pm</span>
+                <a href="#">view</a>
+            </div>
+        </div>
+        <div class="right-shadow"></div>
+        <div class="left-shadow"></div>
+    </section>
+    <section class="newsContainer newsContainerRight">
+        <div class="magnet"></div>
+        <h1>SMAP</h1>
+        <div class="scroll">
+            <div class="listItem">
+                <figure>
+                    <img width="100" height="100" src='@routes.Assets.at("images/apple-touch-icon-114x114-precomposed.png")'>
+                </figure>
+                <p>A new sporttype and field has been added! The sporttype "Soccer" is now available.</p>
+                <span class="timestamp">12/05/2011 at 12:50pm</span>
+            </div>
+            <div class="listItem">
+                <figure>
+                    <img width="100" height="100" src='@routes.Assets.at("images/apple-touch-icon-114x114-precomposed.png")'>
+                </figure>
+                <p>New colors for arrows are available.</p>
+                <span class="timestamp">11/05/2011 at 12:50pm</span>
+            </div>
+        </div>
+        <div class="right-shadow"></div>
+    </section>
+</div>
+<script defer src='@routes.Assets.at("javascripts/news.js")'></script>
+}

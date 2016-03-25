@@ -1,0 +1,75 @@
+@(nickname: String)
+
+@main("Exercises") {
+<header id="contentHeader">
+    <h1 class="nextTimestamp">Warm Up I</h1>
+    <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+    <a href="#">edit</a>
+    <a href="#">delete</a>
+    <a href="#">print</a>
+    <a href="#">add to training plan</a>
+    <a href="#">add to list</a>
+    <a href="#">back to list</a>
+</header>
+<div id="exercisesWrapper">
+    <section id="exercisesInfo">
+        <figure>
+            <img src='@routes.Assets.at("images/apple-touch-icon-114x114-precomposed.png")'>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+        <span class="attributes">Sportstype: Badminton</span>
+        <span class="attributes">Rating: 5/5</span>
+        <span class="attributes">Difficulty: n/a</span>
+        <span class="attributes">Duration: 15min</span>
+    </section>
+    <section id="exercisesDraw">
+        <canvas class="inputField" height="550px" width="650px"></canvas>
+        <br>
+        play button und ablaufleiste <br>
+        <p>Description of step X:</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+</div>
+<section id="comments">
+    <h1>Comments</h1>
+    <aside class="commentItem">
+        <figure>
+            <img width="100" height="100" src='@routes.Assets.at("images/apple-touch-icon-114x114-precomposed.png")'>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <span class="timestamp">from Christian on 12/05/2011 at 12:50pm</span>
+        <a href="#">delete</a>
+    </aside>
+    <br/>
+    <aside class="commentItem">
+        <figure>
+            <img width="100" height="100" src='@routes.Assets.at("images/apple-touch-icon-114x114-precomposed.png")'>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+        <a href="#">edit</a>
+        <a href="#">delete</a>
+    </aside>
+    <br/>
+    <aside class="commentItem">
+        <figure>
+            <img width="100" height="100" src='@routes.Assets.at("images/apple-touch-icon-114x114-precomposed.png")'>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+        <a href="#">edit</a>
+        <a href="#">delete</a>
+    </aside>
+    <form>
+        <input class="button" type="button" value="Write a comment">
+    </form>
+</section>
+}

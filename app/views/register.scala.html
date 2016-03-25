@@ -1,0 +1,58 @@
+@(createUserForm: Form[User])
+
+@import helper._
+
+@main("Register") {
+<section id="mainLogin">
+    @form(action = routes.Users.submitCreateUser) {
+    <header>
+        <h1>Woohoo! Yeah, joining us is the way to go!</h1>
+    </header>
+    <!-- Die Feldvalidierungen müssen mit JavaScript realisiert werden. Zusätzlich aber auch noch am Server -->
+    @inputText(
+    field = createUserForm("nickname"),
+    args = '_label -> "Nickname:", 'class -> "inputField",'id -> "nickname", 'name -> "nickname", 'placeholder-> "Nickname", '_help -> ""
+    )
+
+    @inputText(
+    field = createUserForm("email"),
+    args = '_label -> "E-Mail:", 'class -> "inputField",'id -> "login", 'name -> "login", 'placeholder-> "E-Mail", '_help -> ""
+    )
+
+    @inputPassword(
+    field = createUserForm("passwords.password"),
+    args = '_label -> "Password:",'class -> "inputField",'id -> "password", 'name -> "password", '_help -> ""
+    )
+
+    @inputPassword(
+    field = createUserForm("passwords.repeatPassword"),
+    args = '_label -> "Repeat Password:",'class -> "inputField",'id -> "repeatPassword", 'name -> "repeatPassword", '_error -> createUserForm.error("passwords") , '_help -> ""
+    )
+
+    @createUserForm.globalError.map { error =>
+    <p>
+        @error.message
+    </p>
+    }
+
+    <input class="button" type="submit" value="Join SMAP"  id="submitRegister" />
+
+    }
+</section>
+<section id="smapDescription">
+    <article>
+        <h1>What is smap?</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo, velit vitae pharetra condimentum,
+            tellus augue varius lectus, id faucibus velit odio in mauris. Nunc ut ante lectus, eget interdum mi.
+            Aenean pretium lectus eget odio auctor eget volutpat libero auctor. Donec auctor orci vitae felis aliquam ultricies.
+            Pellentesque sagittis tempor metus quis dictum. Suspendisse pretium nunc euismod odio rhoncus in aliquet metus ultricies.
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi facilisis tempus augue,
+            a condimentum purus aliquet posuere.</p>
+        <p>Duis nec condimentum mi. Vestibulum in nulla dui. Praesent augue nulla, euismod et vestibulum vel, dapibus vel leo.
+            Ut egestas justo ut nunc porttitor placerat. Donec feugiat tortor commodo diam fringilla et ultricies ligula accumsan.
+            Vivamus posuere nibh ut eros auctor bibendum. Quisque adipiscing laoreet ipsum, sit amet elementum nulla tincidunt a.
+            Phasellus cursus adipiscing lacus, a commodo tellus suscipit quis. Quisque blandit hendrerit vulputate.
+            Ut placerat neque non libero consectetur vel tristique sapien aliquet.</p>
+    </article>
+</section>
+}

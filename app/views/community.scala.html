@@ -1,0 +1,192 @@
+@(nickname: String)
+
+@main("Community") {
+<div id="communityWrapper">
+    <section id="statusBoard">
+        <h1>Status Board</h1>
+        <div class="listItem listItemPad">
+            <div class="listItemOver">
+                <p>Am Donnerstag fällt das Training aus</p>
+                <span class="timestamp">from SG Post/Süd on 12/05/2011 at 12:50pm</span>
+                <a href="#">go to group</a>
+            </div>
+        </div>
+        <div class="listItem listItemPad">
+            <div class="listItemOver">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+                <a href="#">go to group</a>
+            </div>
+        </div>
+        <div class="listItem listItemPad">
+            <div class="listItemOver">
+                <p>Du hast eine Einladung zur Gruppe SCHMOCKS erhalten.</p>
+                <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+                <a href="#">go to group</a>
+                <a href="#">join group</a>
+            </div>
+        </div>
+    </section>
+    <section id="friendsList">
+        <div id="tabContainer">
+            <nav class="tabs">
+                <ul>
+                    <li id="tabHeader_1">Contacts</li>
+                    <li id="tabHeader_2">Info</li>
+                    <li id="tabHeader_3">Settings</li>
+                </ul>
+            </nav>
+            <div class="tabsContent">
+                <section class="tabPage" id="tabPage_1">
+                    <h3>Friends:</h3>
+                    <section id="tabPageFriends"  class="scroll"> <!-- scrollbalken sollte erst erscheinen wenn der ganze Container zu groß ist, nicht wenn ein einzelner Bereich (Friends, Groups) zu groß wird  -->
+                        <div>
+                            <div class="contactLine"><a href="#">Norbert</a><p>workaholic!</p></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a> <!-- ein Icon hinmachen. Beim Mouseover erscheint ein Fenster mit Optionen z.B Gemeinsame Gruppen, Remove  -->
+                        </div>
+                        <div>
+                            <div class="contactLine"><a href="#">Rosi</a></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a>
+                        </div>
+                        <div>
+                            <div class="contactLine"><a href="#">Mäxchen</a><p>updated working maniac!</p></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a>
+                        </div>
+                        <div>
+                            <div class="contactLine"><a href="#">Franz</a></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a>
+                        </div>
+                        <div>
+                            <div class="contactLine"><a href="#">Sissi</a><p>active sis!</p></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a>
+                        </div>
+                    </section>
+                    <h3>Groups:</h3>
+                    <section id="tabPageGroups" class="scroll">
+                        <div>
+                            <div class="contactLine"><a href="#">SG Post/Süd</a><p>new!</p></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a>
+                        </div>
+                        <div>
+                            <div class="contactLine"><a href="#">SCHMOCKS</a></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a>
+                        </div>
+                        <div>
+                            <div class="contactLine"><a href="#">Boomers!</a></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a>
+                        </div>
+                        <div>
+                            <div class="contactLine"><a href="#">Badminton Freaks</a></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a>
+                        </div>
+                        <div>
+                            <div class="contactLine"><a href="#">Fab 4 and the crazy three dudes</a></div>
+                            <a href="#">message</a>
+                            <a href="#">icon</a>
+                        </div>
+                    </section>
+                    <a href="#">add a contact</a>
+                </section>
+                <section class="tabPage" id="tabPage_2">
+                    <form>
+                        <label for="about">About: </label>
+                        <textarea class="inputField" id="about" name="exerciseDescription" placeholder="About you.."></textarea>
+                        <label for="age">Age: </label>
+                        <input class="inputField" type="text" value="" placeholder="Age" id="age" />
+                        <label for="city">City: </label>
+                        <input class="inputField" type="text" value="" placeholder="City" id="city" />
+                        <label for="sports">Sports: </label>
+                        <input class="inputField" type="text" value="" placeholder="Sports" id="sports" />
+                    </form>
+                </section>
+                <section class="tabPage" id="tabPage_3">
+                    <form>
+                        <label for="friendsSort">Sort friends list: </label>
+                        <select class="inputField" name="friendsSort" id="friendsSort">
+                            <option value="date">By date added</option>
+                            <option value="alphabetic">Alphabetic</option>
+                        </select>
+                        <label for="GroupsSort">Sort Groups list: </label>
+                        <select class="inputField" name="friendsSort" id="GroupsSort">
+                            <option value="date">By date added</option>
+                            <option value="alphabetic">Alphabetic</option>
+                        </select>
+                        <label for="activityStatus">Show activity status in contacts for </label>
+                        <select class="inputField" name="activityStatus" id="activityStatus">
+                            <option value="all">everybody</option>
+                            <option value="onlyfriends">my friends</option>
+                            <option value="onlyGroups">my groups</option>
+                            <option value="nobody">no one</option>
+                        </select>
+                        <label for="calendarVisibility">Allow to see your dates: </label>
+                        <select class="inputField" name="calendarVisibility" id="calendarVisibility">
+                            <option value="all">Everybody</option>
+                            <option value="onlyFriends">My Friends</option>
+                            <option value="onlyGroups">My Groups</option>
+                            <option value="nobody">No one</option>
+                        </select>
+                        <label for="calendarDates">Show dates in calendar: </label>
+                        <select class="inputField" name="calendarDates" id="calendarDates">
+                            <option value="all">All dates</option>
+                            <option value="onlyFriends">Dates of my friends</option>
+                            <option value="onlyGroups">Dates of my groups</option>
+                            <option value="ownDates">Only my own dates</option>
+                        </select>
+                        <label for="showNextDates">Number of next dates shown: </label>
+                        <select class="inputField" name="showNextDates" id="showNextDates">
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                        </select>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </section>
+    <section id="datesList">
+        <div class="datesListPaper">
+            <div class="magnet magnet4"></div>
+            <h1>Calendar</h1>
+            <div class="listItem">
+                <h1>12.02.2012</h1>
+                <div class="datesItem">
+                    <p>17:45uhr-19:30uhr</p>
+                    <p><a href="#">Saufen</a> / <a href="#">SCHMOCKS</a></p>
+                </div>
+                <!-- 								<div class="datesItem"> -->
+                <!-- 									<p>19:45uhr-22:00uhr</p> -->
+                <!-- 									<p><a href="#">Training</a> / <a href="#">SG Post/Süd Regensburg</a></p> -->
+                <!-- 								</div> -->
+            </div>
+            <div class="listItem">
+                <h1>14.02.2012</h1>
+                <div class="datesItem">
+                    <p>19:45uhr-22:00uhr</p>
+                    <p><a href="#">Training</a> / <a href="#">SG Post/Süd Regensburg</a></p>
+                </div>
+            </div>
+            <div class="listItem">
+                <h1>15.02.2012</h1>
+                <div class="datesItem">
+                    <p>17:45uhr-19:30uhr</p>
+                    <p><a href="#">Sommerfest</a></p>
+                    <a href="#">remove</a>
+                </div>
+            </div>
+            <a class="listEnd" href="#">add date</a>
+            <div class="left-shadow"></div>
+        </div>
+    </section>
+</div>
+}

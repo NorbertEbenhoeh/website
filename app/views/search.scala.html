@@ -1,0 +1,88 @@
+@(nickname: String)
+
+@main("Search") {
+<header id="contentHeader">
+    <h1>Searchresult</h1>
+</header>
+<form id="searchResult">
+    <div class="searchCrit">
+        <label for="sportstype">Sportstype: </label>
+        <select class="inputField" name="sportstype" id="sportstype">
+            <option value="aikido">Aikido</option>
+            <option value="badminton">Badminton</option>
+            <option value="football">Football</option>
+        </select>
+    </div>
+
+    <div class="searchCrit">
+        <label for="realm">Realm: </label>
+        <select class="inputField" name="realm" id="realm">
+            <option value="exercise">Exercises</option>
+            <option value="trainPlan">Train plans</option>
+        </select>
+    </div>
+</form>
+<section id="resultItemsContainer">
+    <article class="resultItem">
+        <figure>
+            <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+        </figure>
+        <h1><a href="#">Warm Up I</a></h1>
+        <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+        <a href="#">add to list of exercises</a>
+    </article>
+    <br/>
+    <article class="resultItem">
+        <figure>
+            <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/tp_icon.png")'>
+        </figure>
+        <h1><a href="trainPlans_view.html">Youth 2011/2012</a></h1>
+        <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+        <a href="#">add to list of training plans</a>
+    </article>
+    <br/>
+    <article class="resultItem">
+        <figure>
+            <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/ex_icon.png")'>
+        </figure>
+        <h1><a href="exercises_view.html">Doubles attack forehand</a></h1>
+        <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+        <a href="#">add to list of exercises</a>
+    </article>
+    <br/>
+    <article class="resultItem">
+        <figure>
+            <img width="40" height="40" src='@routes.Assets.at("stylesheets/src/tp_icon.png")'>
+        </figure>
+        <h1><a href="trainPlans_view.html">Youth 2010/2011</a></h1>
+        <span class="timestamp">from Norbert on 12/05/2011 at 12:50pm</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+        <a href="#">already in your list</a>
+    </article>
+    <br>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">Next</a>
+    <br>
+</section>
+}

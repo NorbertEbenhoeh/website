@@ -1,0 +1,89 @@
+@(accountForm: Form[(String,String,String,String,String)],settingsForm: Form[(String,Boolean,Boolean,Boolean,Boolean,Boolean)],content:Html)
+@import helper._
+@import models.MyHelpers._
+
+@main("Settings") {
+<div id="settingsWrapper">
+    <div id="settingsPapers">
+        <div class="magnet magnet3"></div>
+        <section id="account" class="activeSettings">
+            <a id="accountClick">Account</a>
+            <div class="settingsSplit">
+                @form(action = routes.Users.changeAccount) {
+                @inputText(
+                field = accountForm("nickname"),
+                args = '_label -> "Nickname:",'class -> "accountInput", '_help -> ""
+                )
+                @inputText(
+                field = accountForm("firstname"),
+                args = '_label -> "First name:", 'class -> "accountInput",'placeholder-> "First name", '_help -> ""
+                )
+                @inputText(
+                field = accountForm("lastname"),
+                args = '_label -> "Surname:", 'class -> "accountInput",'placeholder-> "surname", '_help -> ""
+                )
+                @inputText(
+                field = accountForm("city"),
+                args = '_label -> "City:", 'class -> "accountInput",'placeholder-> "Town", '_help -> ""
+                )
+                @inputText(
+                field = accountForm("country"),
+                args = '_label -> "Country:", 'class -> "accountInput",'placeholder-> "country", '_help -> ""
+                )
+                @accountForm.globalError.map { error =>
+                <p>
+                    @error.message
+                </p>
+                }
+
+                <input class="button" type="submit" value="Take over changes"  id="changeAccount" />
+                }
+                <p><a href="javascript:;" onclick="updateAccount('password')">Change Password</a></p>
+                <p><a href="javascript:;" onclick="updateAccount('email')">Change E-Mail</a></p>
+                <p><a href="javascript:;" onclick="updateAccount('delete')">Delete Account</a></p>
+
+            </div>
+        </section>
+        <section id="settings">
+            <a id="settingsClick" href="#">Settings</a>
+            <div class="settingsSplit">
+                <div class="settingsLeft">
+                    <form>
+                        @inputRadioGroup(
+                        field = settingsForm("visibility"),
+                        options = options("All" -> "All", "Friends" -> "Friends", "Groups" -> "Friends and Groups"),
+                        '_label -> "Visibility (who can see my profile?)",'class -> "settingsCheckbox", '_help -> ""
+                        )
+                    </form>
+                </div>
+                <div class="settingsRight">
+                    <form>
+                        <label for="notifications">Notifications (notify me by mail about what?)</label>
+                        @checkbox(
+                        field = settingsForm("message"),
+                        '_label -> "when I get a message", 'class -> "settingsCheckbox", '_help -> ""
+                        )
+                        @checkbox(
+                        field = settingsForm("feature"),
+                        '_label -> "when smap provides new features", 'class -> "settingsCheckbox", '_help -> ""
+                        )
+                        @checkbox(
+                        field = settingsForm("exeChange"),
+                        '_label -> "when exercises I use change", 'class -> "settingsCheckbox", '_help -> ""
+                        )
+                        @checkbox(
+                        field = settingsForm("tpChange"),
+                        '_label -> "when training plans I use change", 'class -> "settingsCheckbox", '_help -> ""
+                        )
+                        @checkbox(
+                        field = settingsForm("dates"),
+                        '_label -> "when my dates change", 'class -> "settingsCheckbox", '_help -> ""
+                        )
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+@content
+}
